@@ -29,7 +29,7 @@
             ],
             "styles": [
               "src/styles.scss"
-              //,"src/styles/bootstrap-4.5.0-dist/css/bootstrap.min.css"
+              ,"src/styles/bootstrap-4.5.0-dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
