@@ -1,4 +1,6 @@
-
+<div *ngIf="!(router.url === '/welcome'|| router.url ===  '/inscription')">
+  <app-navbar ></app-navbar>
+</div>
 
 <div>
   <router-outlet></router-outlet>

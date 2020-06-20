@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }      from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccueilComponent } from './accueil/accueil.component';
+import { AccueilComponent } from './main/accueil/accueil.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { NosActivitesComponent } from './nos-activites/nos-activites.component';
-import { MaCommunauteComponent } from './ma-communaute/ma-communaute.component';
+import { NavbarComponent } from './main/navbar/navbar.component';
+import { NosActivitesComponent } from './main/nos-activites/nos-activites.component';
+import { MaCommunauteComponent } from './main/ma-communaute/ma-communaute.component';
 
 @NgModule({
   declarations: [
@@ -27,4 +28,7 @@ import { MaCommunauteComponent } from './ma-communaute/ma-communaute.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}
