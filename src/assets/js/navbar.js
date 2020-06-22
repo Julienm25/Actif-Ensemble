@@ -32,8 +32,8 @@ $(document).ready(function(){
   setInterval(function(){ test(); });
 });
 $(window).on('resize', function(){
-  setInterval(function(){ test(); }, 10);
+  setInterval(function(){ test(); }, 0);
 });
-$(".navbar-toggler").click(function(){
+$(".navbar-toggler").mouseup(function(){
   setInterval(function(){ test(); });
 });

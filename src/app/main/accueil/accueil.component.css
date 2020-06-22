@@ -39,3 +39,21 @@ div#content{
   margin-top: 20px ;
   text-align: center;
 }
+
+table, tr {
+  text-align: center;
+  border-collapse: separate;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+td {
+  padding-top: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  text-align: center;
+  border: 2px solid black;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
