@@ -21,7 +21,6 @@ export class AppComponent {
     this.showInscription = false ;
   }
 
-
   DisplayInscription(){
     this.showInscription = !this.showInscription;
     this.showConnexion = false ;
