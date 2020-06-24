@@ -12,4 +12,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showConnexion: boolean = true;
+
+  toggleChild(){
+    this.showConnexion = !this.showConnexion;
+  }
+
 }

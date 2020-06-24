@@ -18,7 +18,8 @@
           "scripts": [
             "node_modules/jquery/dist/jquery.min.js",
             "src/styles/bootstrap-4.5.0-dist/js/bootstrap.min.js",
-            "src/assets/js/navbar.js"
+            "src/assets/js/navbar.js",
+            "src/assets/js/signin.js"
           ]
         }
       },
@@ -46,7 +47,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "src/styles/bootstrap-4.5.0-dist/js/bootstrap.min.js",
-              "src/assets/js/navbar.js"
+              "src/assets/js/navbar.js",
+              "src/assets/js/signin.js"
             ]
           },
           "configurations": {
