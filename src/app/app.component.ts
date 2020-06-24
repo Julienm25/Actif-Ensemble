@@ -18,7 +18,7 @@ export class AppComponent {
 
   DisplayConnexion(){
     this.showConnexion = !this.showConnexion;
-    this.showConnexion = true ;
+    this.showInscription = false ;
   }
 
 
