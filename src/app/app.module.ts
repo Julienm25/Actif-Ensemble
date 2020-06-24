@@ -6,22 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './main/accueil/accueil.component';
 import { InscriptionComponent } from './main/inscription/inscription.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { NavbarComponent } from './main/navbar/navbar.component';
 import { NosActivitesComponent } from './main/nos-activites/nos-activites.component';
 import { MaCommunauteComponent } from './main/ma-communaute/ma-communaute.component';
 import { ConnexionComponent } from './main/connexion/connexion.component';
+import { Page1Component } from './inscription/page1/page1.component';
+import { Page2Component } from './inscription/page2/page2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     InscriptionComponent,
-    WelcomeComponent,
-    NavbarComponent,
     NosActivitesComponent,
     MaCommunauteComponent,
     ConnexionComponent,
+    Page1Component,
+    Page2Component,
   ],
   imports: [
     BrowserModule,

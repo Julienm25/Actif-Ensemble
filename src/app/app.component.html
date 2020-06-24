@@ -1,4 +1,5 @@
-<div  *ngIf="!(router.url === '/welcome'|| router.url ===  '/inscription')" href="javascript:void(0);">
+<div *ngIf="isSomePage()">
+<div href="javascript:void(0);">
   <nav class="navbar navbar-expand-lg fixed-top navbar-mainbg">
     <img src="./assets/img/logo.jpg" height="60" alt="Actif-Ensemble">
     <a class="navbar-brand navbar-logo" href="#">Actif-Ensemble</a>
@@ -40,6 +41,8 @@
 
 <div *ngIf="showInscription" class="popup plan2">
   <app-inscription></app-inscription>
+</div>
+
 </div>
 
 <div>

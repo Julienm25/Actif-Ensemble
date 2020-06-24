@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { NavbarComponent } from './main/navbar/navbar.component';
 import {Input}  from '@angular/core';
 
 declare  var jQuery:  any;
@@ -12,7 +11,17 @@ declare  var jQuery:  any;
 })
 export class AppComponent {
   title = 'Actif-Ensemble';
-  constructor(public router: Router){}
+  active: boolean = true;
+  constructor(
+    private router: Router
+  ) {}
+  isSomePage() {
+    if (this.router.url.includes('/main')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   showConnexion: boolean = false;
   showInscription: boolean = false;
 
@@ -25,5 +34,7 @@ export class AppComponent {
     this.showInscription = !this.showInscription;
     this.showConnexion = false ;
   }
+
+
 }
 
