@@ -9,9 +9,12 @@ declare  var jQuery:  any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'Actif-Ensemble';
   active: boolean = true;
+  showConnexion: boolean = false;
+  showInscription: boolean = false;
   constructor(
     private router: Router
   ) {}
@@ -22,8 +25,6 @@ export class AppComponent {
       return false;
     }
   }
-  showConnexion: boolean = false;
-  showInscription: boolean = false;
 
   DisplayConnexion(){
     this.showConnexion = !this.showConnexion;
