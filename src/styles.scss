@@ -1,9 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-div#content{
-  width:100%;
-  height:100%;
-  position:absolute;
-}
+
 #columns-container {
   position:relative;
   height: 100%;
@@ -18,7 +14,7 @@ div#content{
 
 .plan2{
   position: fixed;
-  z-index:1;
+  z-index:1000;
 }
 .btn-facebook {
   background-color: #405D9D;

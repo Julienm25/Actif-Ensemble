@@ -10,39 +10,46 @@
       <ul class="navbar-nav navbar-static-top" style="margin:auto;" >
         <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
         <li class="nav-item active">
-          <a class="nav-link" href="javascript:void(0);"  routerLink="/main/accueil">
+          <a class="nav-link" href="javascript:void(0);"  routerLink="accueil">
             <i class="fas fa-tachometer-alt"></i>accueil
           </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="javascript:void(0);"  routerLink="/main/nos-activites">
+          <a class="nav-link" href="javascript:void(0);"  routerLink="nos-activites">
             <i class="fas fa-tachometer-alt"></i>nos activités
           </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="javascript:void(0);"  routerLink="/main/ma-communaute">
+          <a class="nav-link" href="javascript:void(0);"  routerLink="ma-communaute">
             <i class="fas fa-tachometer-alt"></i>ma communauté
           </a>
         </li>
       </ul>
     </div>
-    <div style="margin-right: 40px">
-      <button type="button" class="btn btn-light" style="border-color: black; padding: 10%;" (click)="DisplayConnexion()">Connexion</button>
+    <div style="margin-right: 40px" *ngIf="!this.authenticationService.currentUserValue">
+      <button type="button" class="btn btn-light" style="border-color: black; padding: 10%;"  routerLink="/login"  routerLinkActive="active-link">Connexion</button>
     </div>
-    <div style="margin-right: 40px">
-      <button type="button" class="btn btn-light" style="border-color: black; padding: 10%; " (click)="DisplayInscription()">Inscription</button>
+    <div style="margin-right: 40px" *ngIf="!this.authenticationService.currentUserValue">
+      <button type="button" class="btn btn-light" style="border-color: black; padding: 10%; "  routerLink="/signin"  routerLinkActive="active-link">Inscription</button>
     </div>
+    <div style="margin-right: 40px" *ngIf="this.authenticationService.currentUserValue">
+      <button (click)="logout()" type="button" class="btn btn-light" style="border-color: black; padding: 10%; " >Deconnexion</button>
+    </div>
+    <div style="margin-right: 40px" *ngIf="this.authenticationService.currentUserValue">
+      <button type="button" class="btn btn-light" style="border-color: black; padding: 10%; " >Mon compte</button>
+    </div>
+
   </nav>
 </div>
 
-<div *ngIf="showConnexion" class="popup plan2">
-  <app-connexion></app-connexion>
+
+</div>
+<div *ngIf="DisplayConnexion()" class="popup plan2">
+  <app-login></app-login>
 </div>
 
-<div *ngIf="showInscription" class="popup plan2">
+<div *ngIf="showInscription" class="popup plan2 middle">
   <app-inscription></app-inscription>
-</div>
-
 </div>
 
 <div class="middle">

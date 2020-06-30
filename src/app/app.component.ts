@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule,Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import {Input}  from '@angular/core';
+import { AuthenticationService } from './_services';
+import { User } from './_models';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+
 
 declare  var jQuery:  any;
 @Component({
@@ -15,27 +20,45 @@ export class AppComponent {
   active: boolean = true;
   showConnexion: boolean = false;
   showInscription: boolean = false;
+  currentUser: User;
+
   constructor(
-    private router: Router
-  ) {}
+    private router: Router,
+    public authenticationService: AuthenticationService
+  ) {
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+  }
+
   isSomePage() {
-    if (this.router.url.includes('/main')) {
+    if (this.router.url.includes('/')) {
       return true;
     } else {
       return false;
     }
   }
 
+
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/accueil']);
+  }
+
   DisplayConnexion(){
-    this.showConnexion = !this.showConnexion;
-    this.showInscription = false ;
+      if (this.router.url.includes('/login')) {
+        return true;
+      } else {
+        return false;
+      }
   }
 
   DisplayInscription(){
-    this.showInscription = !this.showInscription;
-    this.showConnexion = false ;
+    if (this.router.url.includes('/signin')) {
+      this.showInscription = true ;
+    } else {
+      this.showInscription = false ;
+    }
   }
-
-
 }
+
+
 
