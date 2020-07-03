@@ -2,3 +2,14 @@
   display: flex;
   flex: 1 1 auto;
 }
+table, tr {
+  text-align: center;
+  border-collapse: separate;
+  margin-left:auto;
+  margin-right:auto;
+  border-spacing: 20px 0px;
+}
+td{
+
+
+}

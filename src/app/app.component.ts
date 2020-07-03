@@ -30,10 +30,10 @@ export class AppComponent {
   }
 
   isSomePage() {
-    if (this.router.url.includes('/')) {
-      return true;
-    } else {
+    if (this.router.url.includes('/inscription/page1')||this.router.url.includes('/inscription/page2')) {
       return false;
+    } else {
+      return true;
     }
   }
 

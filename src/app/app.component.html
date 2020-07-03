@@ -1,13 +1,23 @@
-<div *ngIf="isSomePage()">
+<div>
 <div href="javascript:void(0);">
   <nav class="navbar navbar-expand-lg fixed-top navbar-mainbg">
+    <a routerLink="/accueil"  routerLinkActive="active-link">
     <img src="./assets/img/logo.jpg" height="75" width="175" alt="Actif-Ensemble">
     <a class="navbar-brand navbar-logo" href="#">Actif-Ensemble</a>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars text-white"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -80px;">
-      <ul class="navbar-nav navbar-static-top" style="margin:auto;" >
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: -80px;" >
+      <ul class="navbar-nav navbar-static-top" style="margin:auto;" *ngIf="!isSomePage()" >
+        <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+        <li class="nav-item active">
+          <a class="nav-link" href="javascript:void(0);">
+            <i class="fas fa-tachometer-alt"></i>Inscription
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-static-top" style="margin:auto;" *ngIf="isSomePage()" >
         <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
         <li class="nav-item active">
           <a class="nav-link" href="javascript:void(0);"  routerLink="accueil">
@@ -37,7 +47,7 @@
     </div>
     <div style="margin-right: 40px" *ngIf="this.authenticationService.currentUserValue">
       <a  style=" color: black ;" routerLink="/signin"  routerLinkActive="active-link">
-        <table style="text-align:center; background-color: #D8A471 ;  border-radius: 5px; border-color: black;" >
+        <table style="text-align:center; background-color: #8DC5D3 ;  border-radius: 5px; border-color: black;" >
         <tr>
           <td style="" >
             <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-person-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

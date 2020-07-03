@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://julienm25.github.io/Actif-Ensemble/'
+  apiUrl: 'http://localhost:4000'
 };
 
 /*
