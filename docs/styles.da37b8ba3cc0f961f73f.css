@@ -1,4 +1,4 @@
-div#content{width:100%;height:100%;position:absolute}#columns-container{position:relative;height:100%;width:100%}.column{position:absolute}.column-a{top:15%;bottom:0;right:80%;left:0}.column-b{height:100vh;z-index:-1000;bottom:0;right:25%;left:25%;background-color:#bbf1c8}.column-c{top:15%;bottom:0;right:0;left:80%}.centered{margin-top:20px;text-align:center}.plan2{position:fixed;z-index:1}
+#columns-container{position:relative;height:100%;width:100%}.centered{margin-top:20px;text-align:center}.plan2{position:fixed;z-index:1000}.btn-facebook{background-color:#405d9d;color:#fff}.btn-twitter{background-color:#42aeec;color:#fff}.btn-primary,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.btn-primary:visited{background-color:#004067!important;border-color:#004067!important}.btn-light,.btn-light:active,.btn-light:focus,.btn-light:hover,.btn-light:visited{background-color:#d8a471!important;border-color:#000!important;border-radius:5px!important}
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
