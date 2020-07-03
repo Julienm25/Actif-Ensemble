@@ -6,7 +6,16 @@
         <div class="centered" style="margin-top:15%;">
           <table>
             <tr>
-              <td>Salut Michel ! Pret pour une activités aujourd'hui ? </td>
+              <td *ngIf="this.authenticationService.currentUserValue" ><app-messageperso></app-messageperso></td>
+              <td *ngIf="!this.authenticationService.currentUserValue" >
+                <div>
+                  <p>
+                    Inscris-toi pour profiter des evenements de la communauté !
+                  </p>
+                <button type="button" class="btn btn-light" style="border-color: black;"  routerLink="/signin"  routerLinkActive="active-link">Inscription</button>
+              </div>
+
+              </td>
             </tr>
           </table>
         </div>

@@ -5,27 +5,29 @@
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <H2>Inscription</H2>
+    <!-- Close -->
+    <div style="margin-right: 5px;margin-top: 5px;" align="right">
+      <button type="button" class="btn btn-primary" style="text-align: right; display: inline-block;"  routerLink="/accueil"  routerLinkActive="active-link" >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
 
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="email" class="fadeIn second" name="email" placeholder="John.Doe@gmail.com">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-      <input type="button" class="fadeIn fourth" value="Inscription" routerLink="/inscription/page1" routerLinkActive="active">
-    </form>
-    <p class="divider-text">
-      <span class="bg-light">OR</span>
-    </p>
-    <p>
-      <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-      <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-    </p>
 
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" style="padding-bottom: 100px">
+      <div class="form-group">
+        <div class="fadeIn first">
+          <H2>Inscription</H2>
+        </div>
+        <label for="email">Adresse email</label>
+        <input type="email" formControlName="email" class="form-control" />
+      </div>
+      <button [disabled]="loading" class="btn btn-primary" routerLink="/inscription/page1"  routerLinkActive="active-link" >
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Inscription
+      </button>
+    </form>
 
   </div>
 </div>

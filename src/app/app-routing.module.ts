@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'nos-activites', component: NosActivitesComponent},
   {path: 'ma-communaute', component: MaCommunauteComponent},
   {path: 'login', component: AccueilComponent },
+  {path: 'signin', component: AccueilComponent },
   {path: 'inscription/page1', component: Page1Component},
   {path: 'inscription/page2', component: Page2Component},
   { path: '**', redirectTo: 'accueil' }

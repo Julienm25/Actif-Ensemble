@@ -53,9 +53,9 @@ export class AppComponent {
 
   DisplayInscription(){
     if (this.router.url.includes('/signin')) {
-      this.showInscription = true ;
+      return true;
     } else {
-      this.showInscription = false ;
+      return false;
     }
   }
 }
