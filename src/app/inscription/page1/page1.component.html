@@ -4,7 +4,12 @@
     <div id="columns-container">
       <div class="column column-b">
         <div class="centered" style="margin-top:15%;" >
-          <div align="center">
+          <div align="center" >
+            <H2> Qui etes vous ?</H2>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #D8A471 !important; " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <table style="text-align:center ; margin-top: 50px">
           <tr>
             <td>
               <label for="prenom">Prenom :</label>
@@ -13,24 +18,76 @@
               <label for="nom">Nom :</label>
             </td>
             <td>
-              <label for="birthday">Date de naissance:</label>
+              <label for="birthday">Date de naissance :</label>
             </td>
           </tr>
-
           <tr>
             <td>
-              <input type="text" id="prenom" name="user_firstname">
+              <input type="text" id="prenom" name="user_firstname"placeholder="Jean" >
             </td>
             <td>
-              <input type="text" id="nom" name="user_name">
+              <input type="text" id="nom" name="user_name" placeholder="Dupont">
             </td>
             <td>
               <input type="date" id="birthday" name="user_birthday"
-                     value="2020-07-01"
+                     placeholder="2000-07-01"
                      min="1950-01-01" max="2000-12-31">
             </td>
           </tr>
-
+            </table>
+            <table style="margin-top: 50px ; text-align:center;">
+            <tr>
+              <td>
+                <label for="CP">Code postal :</label>
+              </td>
+              <td>
+                <label for="ville">Ville :</label>
+              </td>
+              <td>
+                <label for="numero">Numero :</label>
+              </td>
+              <td>
+                <label for="rue">Rue :</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="Number" id="CP" name="CP" placeholder="25000" maxlength="5" size="5"  min="1" >
+              </td>
+              <td>
+                <input type="text" id="ville" name="ville"   placeholder="Ville">
+              </td>
+              <td>
+                <input type="number" id="numero" name="numero"
+                       placeholder="01" maxlength="5" size="5" min="1">
+              </td>
+              <td>
+                <input type="text" id="rue" name="rue"
+                       placeholder="rue de">
+              </td>
+            </tr>
+            </table>
+            <table style="margin-top: 50px ; text-align:center;">
+              <tr>
+                <td>
+                  <label for="email">Adresse email:</label>
+                </td>
+                <td>
+                  <label for="passwd">Mot de passe :</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="email" id="email" name="email" placeholder="jean.dupont@gmail.com" >
+                </td>
+                <td>
+                  <input type="password" id="passwd" name="passwd"   placeholder="*********">
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+          <button type="button" class="btn btn-primary" style="border-color: black; margin-top: 20px;"  routerLink="/inscription/page2"  routerLinkActive="active-link" >Continuer</button>
           </div>
         </div>
       </div>

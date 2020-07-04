@@ -1,1 +1,89 @@
-<p>page2 works!</p>
+<head>
+  <script>
+    // When the user clicks on div, open the popup
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+  </script>
+</head>
+<div id="container" >
+  <div id="content">
+    <div id="columns-container">
+      <div class="column column-b">
+        <div class="centered" style="margin-top:15%;" >
+          <div align="center" >
+            <H2> Personnalisez votre profil</H2>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #D8A471 !important; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <table style="margin-top: 50px ; text-align:center;">
+              <tr>
+                <td>
+                  <select id="pathologie" name="pathologie" style="width:220px; ">
+                    <option value="obesite">Obesite</option>
+                    <option value="cardio">Maladie cardio-vasculaire</option>
+                    <option value="arthrose">Arthrose</option>
+                    <option value="BPCO">BPCO</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="date" id="Diagnostique" name="Diagnostique"
+                         placeholder="2000-07-01"
+                         min="1950-01-01" max="2020-12-31">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select id="frequence" name="frequence" style="width:220px; ">
+                  <option value="1">1h par semaine</option>
+                  <option value="4">4h par semaine</option>
+                  <option value="6">6h par semaine</option>
+                  <option value="Jamais">Jamais</option>
+                </select>
+                </td>
+                <td>
+                  <select id="douleur" name="douleur" style="width:220px; ">
+                    <option value="Genoux">Genoux</option>
+                    <option value="Dos">Dos</option>
+                    <option value="Main">Main</option>
+                    <option value="Jambe">Jambe</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="margin-top: 20px;">
+              Terminer
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Merci de votre inscription</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" routerLink="/"  routerLinkActive="active-link">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Un email vous a été envoyé. Merci de confirmer votre addresse email. </p>
+                    <p>Vous allez etre redirigé vers l'accueil </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"  routerLink="/"  routerLinkActive="active-link">Fermer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -19,6 +19,8 @@ import { Page1Component } from './inscription/page1/page1.component';
 import { Page2Component } from './inscription/page2/page2.component';
 import { LoginComponent } from './main/login';
 import { MessagepersoComponent } from './main/accueil/messageperso/messageperso.component';
+import { MonCompteComponent } from './main/mon-compte/mon-compte.component';
+import { PerteDePoidsComponent } from './main/nos-activites/perte-de-poids/perte-de-poids.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { MessagepersoComponent } from './main/accueil/messageperso/messageperso.
     Page2Component,
     LoginComponent,
     MessagepersoComponent,
+    MonCompteComponent,
+    PerteDePoidsComponent,
 
   ],
   imports: [
